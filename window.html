@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Frameless Netflix</title>
+    <link rel="stylesheet" href="styles/style.css">
+			 <script>
+              (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+              (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+              m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+              })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+              ga('create', 'UA-74359608-19', 'auto');
+              ga('send', 'pageview');
+
+            </script>
+</head>
+<body id="body">
+<div>
+    <webview class="background" id="panel-container" src="http://www.netflix.com/browse/" partition="persist:framelessapps" frameborder="0"></webview>
+<div id="buttons" class="position">
+    <div id="background" class="background"></div>
+    <div id="help-container" class="help-container">
+        <div class="help-item move-label">Drag to move window</div>
+        <div class="help-item pin-label">Toggle Always on top</div>
+        <div class="help-item close-label">Close window</div>
+    </div>
+    <div id="panel-container" class="panel-container">
+        <div class="move-right">
+
+            <button class="fyt-button" title="Move" id="move-window-button" style="-webkit-app-region: drag;">
+                <svg xmlns:xlink="http://www.w3.org/1999/xlink" height="100%" version="1.1" viewBox="0 0 36 36" width="100%">
+                    <defs>
+                        <path id="fyt-svg-2" d="M24.5,16.45 L24.5,14.95L27.5,17.95L24.5,20.95L24.5,19.45L20,19.45L20,23.95L21.5,23.95L18.5,26.95L15.5,23.95L17,23.95L17,19.45L12.5,19.45L12.5,20.95L9.5,17.95L12.5,14.95L12.5,16.45L17,16.45L17,11.95L15.5,11.95L18.5,8.95L21.5,11.95L20,11.95L20,16.45"></path>
+                    </defs>
+                    <use class="ytp-svg-shadow" stroke="#000" stroke-opacity=".15" stroke-width="2px" xlink:href="#fyt-svg-2"></use>
+                    <use class="ytp-svg-fill" fill="#fff" xlink:href="#fyt-svg-2"></use>
+                </svg>
+            </button>
+
+            <button class="fyt-button" title="Always on top" id="lock-window-button">
+                <svg xmlns:xlink="http://www.w3.org/1999/xlink" height="100%" version="1.1" viewBox="0 0 36 36" width="100%">
+                    <defs>
+                        <path id="fyt-svg-5" d="M24.45,16.2 L20.2,20.45L20.35,20.9L20.5,21.45Q20.5,21.45 20.5,22.05Q20.5,22.05 20.55,23.95Q20.55,23.95 19.3,25.2L16,21.95L13.45,24.5Q13.45,24.5 11.25,26Q11.25,26 10.55,26.45Q10.55,26.45 9.95,26.75L9.55,26.95L9.75,26.5L10,25.9Q10,25.9 10.45,25.2Q10.45,25.2 11.95,23Q11.95,23 14.5,20.45L11.25,17.2L12.55,15.9Q12.55,15.9 14.4,15.9Q14.4,15.9 15,15.95Q15,15.95 15.55,16.1L16,16.2L20.2,12L20.2,11.75L20.15,11.4Q20.15,11.4 20.25,11.05Q20.25,11.05 20.45,9.85Q20.45,9.85 21.35,8.95L27.5,15.05L26.55,16Q26.55,16 25.4,16.2Q25.4,16.2 25.05,16.25Q25.05,16.25 24.7,16.25"></path>
+                    </defs>
+                    <use class="ytp-svg-shadow" stroke="#000" stroke-opacity=".15" stroke-width="2px" xlink:href="#fyt-svg-5"></use>
+                    <use class="ytp-svg-fill" fill="#fff" xlink:href="#fyt-svg-5"></use>
+                </svg>
+            </button>
+            <button class="fyt-button" title="Disabled Always on top" id="unlock-window-button">
+                <svg xmlns:xlink="http://www.w3.org/1999/xlink" height="100%" version="1.1" viewBox="0 0 36 36" width="100%">
+                    <defs>
+                        <path id="fyt-svg-6" d="M22.05,9.65 L23.6,10.3Q23.6,10.3 24.9,11.6Q24.9,11.6 26,12.75Q26,12.75 26.65,14.1Q26.65,14.1 26.7,14.2Q26.7,14.2 26.75,14.3L27.5,15.05L27.3,15.25Q27.3,15.25 27.15,15.4Q27.15,15.4 27.35,16.1Q27.35,16.1 27.45,16.95Q27.45,16.95 27.5,17.25Q27.5,17.25 27.5,17.6Q27.5,17.6 27.5,17.75Q27.5,17.75 27.5,17.95L27.45,18.95L27.45,19.4Q27.45,19.4 27.35,19.85L27.25,20.2L27.1,20.7Q27.1,20.7 26.95,21.2L26.8,21.6L26.3,22.65Q26.3,22.65 25.55,23.6Q25.55,23.6 25.25,24Q25.25,24 24.9,24.35Q24.9,24.35 24.85,24.4Q24.85,24.4 24.8,24.5Q24.8,24.5 24.45,24.75Q24.45,24.75 24.15,25Q24.15,25 23.7,25.4Q23.7,25.4 23.2,25.7Q23.2,25.7 22.2,26.3Q22.2,26.3 21.05,26.6Q21.05,26.6 19.95,26.9Q19.95,26.9 18.7,26.95Q18.7,26.95 18.6,26.95Q18.6,26.95 18.5,26.95Q18.5,26.95 15.25,26.95Q15.25,26.95 12.75,24.9Q12.75,24.9 12,25.5Q12,25.5 11.25,26Q11.25,26 10.55,26.45Q10.55,26.45 9.95,26.75L9.55,26.95L9.75,26.5L10,25.9Q10,25.9 10.45,25.2Q10.45,25.2 10.95,24.45Q10.95,24.45 11.55,23.7Q11.55,23.7 9.5,21.25Q9.5,21.25 9.5,17.95Q9.5,17.95 9.5,17.85Q9.5,17.85 9.5,17.8Q9.5,17.8 9.5,17.75Q9.5,17.75 9.5,17.65Q9.5,17.65 9.5,17.6Q9.5,17.6 9.5,17.55Q9.5,17.55 9.6,15.5Q9.6,15.5 10.55,13.8L10.8,13.3L10.85,13.2Q10.85,13.2 10.9,13.15L11.05,12.95L11.1,12.8Q11.1,12.8 11.2,12.7Q11.2,12.7 11.6,12.1Q11.6,12.1 12.1,11.6Q12.1,11.6 12.65,11.05Q12.65,11.05 13.3,10.6Q13.3,10.6 14.2,9.95Q14.2,9.95 15.2,9.6L15.85,9.35L18.05,8.95L18.1,8.95Q18.1,8.95 18.2,8.95Q18.2,8.95 18.35,8.95Q18.35,8.95 18.5,8.95Q18.5,8.95 18.55,8.95Q18.55,8.95 18.65,8.95Q18.65,8.95 18.7,8.95Q18.7,8.95 18.8,8.95Q18.8,8.95 18.9,8.95Q18.9,8.95 19,8.95Q19,8.95 19.7,9Q19.7,9 20.4,9.15Q20.4,9.15 20.75,9.2Q20.75,9.2 21.05,9.3Q21.05,9.3 21.2,9.1Q21.2,9.1 21.35,8.95M24.3,16.35 L21.7,19L17.45,14.75L20.05,12.15L21.55,12.55Q21.55,12.55 22.7,13.7Q22.7,13.7 23.9,14.9Q23.9,14.9 24.3,16.35Z M21.7,24.2 L22.25,23.95Q22.25,23.95 22.75,23.6L12.9,13.75L12.5,14.25Q12.5,14.25 12.25,14.75Q12.25,14.75 11.75,15.75Q11.75,15.75 11.6,16.9Q11.6,16.9 11.55,17.2Q11.55,17.2 11.55,17.5Q11.55,17.5 11.5,17.7Q11.5,17.7 11.5,17.95Q11.5,17.95 11.5,20.3Q11.5,20.3 12.9,22.15Q12.9,22.15 13.2,22.55Q13.2,22.55 13.55,22.95Q13.55,22.95 13.9,23.3Q13.9,23.3 14.3,23.6Q14.3,23.6 16.1,24.95Q16.1,24.95 18.5,24.95Q18.5,24.95 18.75,24.95Q18.75,24.95 19.05,24.95Q19.05,24.95 19.3,24.9Q19.3,24.9 19.6,24.9Q19.6,24.9 20.7,24.7Q20.7,24.7 21.7,24.2Z M25.3,16.25 L24.85,14.4Q24.85,14.4 23.45,13Q23.45,13 22.05,11.6Q22.05,11.6 20.25,11.15Q20.25,11.15 19.4,10.95Q19.4,10.95 18.5,10.95Q18.5,10.95 16.1,10.95Q16.1,10.95 14.3,12.35L24.15,22.2L25.5,20.35Q25.5,20.35 25.5,17.95Q25.5,17.95 25.5,17.05Q25.5,17.05 25.3,16.25Z M20.25,23.7 L19.45,23.95Q19.45,23.95 18.5,23.95Q18.5,23.95 18.25,23.95Q18.25,23.95 18.05,23.95L16,21.95L15.5,22.45Q15.5,22.45 15.05,22.9Q15.05,22.9 14.65,22.6Q14.65,22.6 14.25,22.2Q14.25,22.2 13.85,21.8Q13.85,21.8 13.6,21.4Q13.6,21.4 14,20.95Q14,20.95 14.5,20.45L12.55,18.5L12.5,18.2Q12.5,18.2 12.5,17.95Q12.5,17.95 12.5,17.05Q12.5,17.05 12.75,16.2Q12.75,16.2 13.5,15.9Q13.5,15.9 14.4,15.9L20.5,22L20.5,22.05L20.5,22.95Q20.5,22.95 20.25,23.7Z"></path>
+                    </defs>
+                    <use class="ytp-svg-shadow" stroke="#000" stroke-opacity=".15" stroke-width="2px" xlink:href="#fyt-svg-6"></use>
+                    <use class="ytp-svg-fill" fill="#fff" xlink:href="#fyt-svg-6"></use>
+                </svg>
+            </button>
+
+            <button class="fyt-button" title="Close" id="close-window-button">
+                <svg xmlns:xlink="http://www.w3.org/1999/xlink" height="100%" version="1.1" viewBox="0 0 36 36" width="100%">
+                    <defs>
+                        <path id="fyt-svg-1" d="M25.95,12.65 L20.65,17.95L25.95,23.25L23.8,25.4L18.5,20.1L13.2,25.4L11.05,23.25L16.35,17.95L11.05,12.65L13.2,10.5L18.5,15.8L23.8,10.5"></path>
+                    </defs>
+                    <use class="ytp-svg-shadow" stroke="#000" stroke-opacity=".15" stroke-width="2px" xlink:href="#fyt-svg-1"></use>
+                    <use class="ytp-svg-fill" fill="#fff" xlink:href="#fyt-svg-1"></use>
+                </svg>
+            </button>
+        </div>
+    </div>
+</div>
+</div>
+<script src="scripts/main.js"></script>
+</body>
+</html>

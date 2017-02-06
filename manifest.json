@@ -1,0 +1,19 @@
+{
+   "app": {
+      "background": {
+         "scripts": [ "scripts/background.js" ]
+      }
+   },
+   "description": "External Frameless Window for Netflix",
+   "icons": {
+      "128": "assets/icon-128.png",
+      "16": "assets/icon-16.png",
+      "32": "assets/icon-32.png"
+   },
+   "manifest_version": 2,
+   "minimum_chrome_version": "40",
+   "name": "Jakeflix",
+   "permissions": [ "webview", "alwaysOnTopWindows", "storage", "contextMenus", "notifications", "unlimitedStorage", "\u003Call_urls>", "browser", "fullscreen" ],
+   "short_name": "Mattflix",
+   "version": "1.0"
+}
